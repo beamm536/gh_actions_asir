@@ -12,7 +12,7 @@ jobs:
              
             - name: acceso shh
               run: |
-                  ssh{{SECRETS.USER_NAME_MV}}@{{SECRETS.USER_IP_MV}}
+                  ssh${{ SECRETS.USER_NAME_MV }}@${{ SECRETS.USER_IP_MV }}
                   pwd
 
 
