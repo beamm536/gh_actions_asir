@@ -2,6 +2,7 @@ name: acceso mv ssh
 
 on: 
     push:
+        branches: [ main ]
 
 jobs:
     prueba-ssh-workflow:
@@ -11,8 +12,15 @@ jobs:
               uses: actions/checkout@v6
              
             - name: acceso shh
-              run: |
-                  ssh${{ SECRETS.USER_NAME_MV }}@${{ SECRETS.USER_IP_MV }}
-                  pwd
+              uses: appleboy/ssh-action@v1
+              with:
+                host: ${{ secrets.USER_IP_MV }}
+                username: ${{ secrets.USER_NAME_MV }}
+                password: ${{ secrets.PASSWORD }}
+                port: 22
+                script: |
+                       cd /home/beatr
+                       mkdir GH_PRUEBA_CARPETA
+
 
 
