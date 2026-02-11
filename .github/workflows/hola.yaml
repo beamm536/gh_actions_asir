@@ -9,5 +9,11 @@ jobs:
         steps:
             - name: hola echo
               run: echo "primer workflow"
+            
+            - name: dar permisos y ejecutamos
+              run: | 
+                  chmod +x hola.sh
+                  ./hola.sh
+
 
 
