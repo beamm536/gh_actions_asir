@@ -11,10 +11,7 @@ jobs:
               run: echo "primer workflow"
             
             - name: dar permisos y ejecutamos
-              run: | 
-                  cd /gh_actions_asir
-                  chmod +x hola.sh
-                  ./hola.sh
+              run: pwd
 
 
 
