@@ -8,9 +8,6 @@ jobs:
     prueba-ssh-workflow:
         runs-on: ubuntu-latest
         steps:
-            - name: clonar repo
-              uses: actions/checkout@v6
-             
             - name: acceso shh
               uses: appleboy/ssh-action@v1
               with:
