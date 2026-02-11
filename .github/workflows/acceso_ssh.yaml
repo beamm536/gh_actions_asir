@@ -16,8 +16,9 @@ jobs:
                 password: ${{ secrets.PASSWORD }}
                 port: 22
                 script: |
-                       cd /home/beatr
-                       mkdir GH_PRUEBA_CARPETA
+                  hostname -I
+                  cd /home/beatr
+                  mkdir GH_PRUEBA_CARPETA
 
 
 
